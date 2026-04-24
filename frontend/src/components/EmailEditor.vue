@@ -176,6 +176,7 @@
           </div>
           <div class="mt-2 flex items-center justify-end space-x-2 sm:mt-0">
             <Button v-bind="discardButtonProps || {}" :label="__('Discard')" />
+            <Button v-bind="draftButtonProps || {}" :label="__('Save Draft')" />
             <Button
               variant="solid"
               v-bind="submitButtonProps || {}"
@@ -223,6 +224,7 @@ const props = defineProps({
   editorProps: { type: Object, default: () => ({}) },
   submitButtonProps: { type: Object, default: () => ({}) },
   discardButtonProps: { type: Object, default: () => ({}) },
+  draftButtonProps: { type: Object, default: () => ({}) },
 })
 
 const CustomParagraph = Paragraph.extend({
